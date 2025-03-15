@@ -2,7 +2,7 @@
 
 // Header section - Defines basic website information
 const header = {
-  homepage: 'http://localhost:5173/', // URL for the homepage - !!! IMPORTANT: UPDATE THIS TO YOUR OFFICIAL WEBSITE LINK BEFORE DEPLOYING!!!!
+  "homepage": "https://kpulikk.github.io/Portfolio/", // URL for the homepage - !!! IMPORTANT: UPDATE THIS TO YOUR OFFICIAL WEBSITE LINK BEFORE DEPLOYING!!!!
   title: 'Kevin', // Title shown in left of the navigation bar
 }
 
