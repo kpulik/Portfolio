@@ -1,0 +1,33 @@
+.scroll-top {
+  position: fixed;
+  bottom: 2em;
+  right: 4em;
+  background-color: transparent;
+  color: var(--clr-primary);
+  padding: 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.scroll-top:hover {
+  transform: scale(1.2);
+  background-color: var(--clr-bg-alt);
+  box-shadow: var(--shadow);
+}
+
+/* Click Effect */
+.scroll-top:active {
+  transform: scale(0.95);
+}
+
+/* Hide on smaller screens */
+@media (max-width: 900px) {
+  .scroll-top {
+    display: none;
+  }
+}

@@ -1,0 +1,15 @@
+/* Grid container for projects section */
+.projects__grid {
+  /* Set maximum width for the grid container */
+  max-width: 1100px;
+  /* Center the grid horizontally */
+  margin: 0 auto;
+  /* Enable CSS Grid layout */
+  display: grid;
+  /* Create responsive columns that automatically fit the container
+     - auto-fit: automatically determines number of columns based on container width
+     - minmax(18em, 1fr): each column is minimum 18em wide and shares available space equally */
+  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+  /* Add 2em spacing between grid items */
+  grid-gap: 2em;
+ }
