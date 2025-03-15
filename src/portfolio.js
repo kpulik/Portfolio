@@ -28,7 +28,6 @@ const projects = [
     stack: ['Python', 'scikit-learn', 'pandas', 'NumPy'],
     sourceCode: 'https://github.com/kpulik/AI-Projects/tree/main/Breast%20Cancer%20Detector%20Project',
     livePreview: '', // Add live link if available
-    image: './img/breast-cancer.png',
   },
   {
     name: 'Handwritten Digits Recognition',
@@ -37,7 +36,6 @@ const projects = [
     stack: ['Python', 'TensorFlow', 'Keras', 'CNN'],
     sourceCode: 'https://github.com/kpulik/AI-Projects/blob/main/Recognizing%20Handwritten%20Digits%20(Sp24_project1).ipynb',
     livePreview: '', // Add live link if available
-    image: './img/mnist.png',
   },
   {
     name: 'Predicting Diabetes Metrics',
@@ -46,7 +44,6 @@ const projects = [
     stack: ['Python', 'scikit-learn', 'Regression'],
     sourceCode: 'https://github.com/kpulik/AI-Projects/blob/main/Predicting%20Diabetes%20Metrics%20(Sp24_project2).ipynb',
     livePreview: '', // Add live link if available
-    image: './img/diabetes.png',
   },
   {
     name: 'NLP for Text Summarization',
@@ -55,7 +52,6 @@ const projects = [
     stack: ['Python', 'TensorFlow', 'Hugging Face', 'NLP'],
     sourceCode: 'https://github.com/kpulik/AI-Projects/blob/main/Natural_Language_Processing.ipynb',
     livePreview: '', // Add live link if available
-    image: './img/nlp.png',
   },
   {
     name: 'Fine-Tuning YOLO Algorithm',
@@ -64,7 +60,6 @@ const projects = [
     stack: ['Python', 'OpenCV', 'TensorFlow', 'YOLOv3'],
     sourceCode: 'https://github.com/kpulik/AI-Projects/blob/main/Fine_tuning_YOLO_Algorithm.ipynb',
     livePreview: '', // Add live link if available
-    image: './img/yolo.png',
   },
   {
     name: 'Linear Algebra Matrix Operations',
@@ -73,7 +68,6 @@ const projects = [
     stack: ['Python'],
     sourceCode: 'https://github.com/kpulik/Linear-Algebra-Matrix-Operations-Program',
     livePreview: '', // https://kpulik.github.io/Linear-Algebra-Matrix-Operations-Program/
-    image: './img/matrix.png',
   },
   {
     name: 'Stock Analysis Program',
@@ -82,7 +76,6 @@ const projects = [
     stack: ['Python', 'Matplotlib', 'API'],
     sourceCode: 'https://github.com/kpulik/Stock-Analysis-Program',
     livePreview: '', // https://kpulik.github.io/Stock-Analysis-Program/
-    image: './img/stock-analysis.png',
   },
 ]
 
