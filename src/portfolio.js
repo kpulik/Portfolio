@@ -11,7 +11,7 @@ const about = {
   name: 'Kevin Pulikkottil',
   role: 'Computer Science Student',
   description:
-    'Aspiring software engineer with a passion for AI, machine learning, and cloud computing. Currently pursuing a Bachelor of Science in Computer Science at The University of Texas at Dallas, where I work on innovative projects and continuously enhance my technical skills.',
+    'Aspiring software engineer with a passion for AI, machine learning, and cybersecurity. Currently pursuing a Bachelor of Science in Computer Science at The University of Texas at Dallas, where I work on innovative projects and continuously enhance my technical skills.',
   resume: '/Portfolio/Kevin_Pulikkottil_Resume.pdf', // Link to your resume (update if hosted elsewhere)
   social: {
     linkedin: 'https://www.linkedin.com/in/kpulik/', // LinkedIn profile link
