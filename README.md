@@ -3,7 +3,7 @@ Whenever changes are made to the portfolio, open your code editor and run the fo
 ```
 npm run build
 git add dist -f
-git commit -m "Remove images from portfolio"
+git commit -m "[put commit message here]"
 git push origin --delete gh-pages
 git subtree push --prefix dist origin gh-pages
 ```
