@@ -57,11 +57,18 @@ const About = () => {
                 href={social.hackerrank}
                 aria-label='hackerrank'
                 className='link link--icon'
+                style={{ 
+                  backgroundColor: '#1e2432', 
+                  padding: '8px 12px', 
+                  borderRadius: '6px',
+                  display: 'inline-flex',
+                  alignItems: 'center'
+                }}
               >
                 <img 
                   src='/Portfolio/hackerrank-logo.svg' 
                   alt='HackerRank' 
-                  style={{ width: '140px', height: 'auto' }}
+                  style={{ width: '140px', height: 'auto', display: 'block' }}
                 />
               </a>
             )}
