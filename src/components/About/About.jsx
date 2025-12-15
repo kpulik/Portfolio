@@ -61,7 +61,7 @@ const About = () => {
                 <img 
                   src='/Portfolio/hackerrank-logo.svg' 
                   alt='HackerRank' 
-                  style={{ width: '24px', height: '24px' }}
+                  style={{ width: '140px', height: 'auto' }}
                 />
               </a>
             )}
