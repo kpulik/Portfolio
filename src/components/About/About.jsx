@@ -59,7 +59,7 @@ const About = () => {
                 className='link link--icon'
               >
                 <img 
-                  src='https://hrcdn.net/hrc/_next/static/next_assets/brand/logo-light.svg' 
+                  src='/Portfolio/hackerrank-logo.svg' 
                   alt='HackerRank' 
                   style={{ width: '24px', height: '24px' }}
                 />
