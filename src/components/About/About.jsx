@@ -1,6 +1,5 @@
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import CodeIcon from '@mui/icons-material/Code'
 import { about } from '../../portfolio'
 import './About.css'
 
@@ -59,7 +58,11 @@ const About = () => {
                 aria-label='hackerrank'
                 className='link link--icon'
               >
-                <CodeIcon />
+                <img 
+                  src='https://hrcdn.net/hrc/_next/static/next_assets/brand/logo-light.svg' 
+                  alt='HackerRank' 
+                  style={{ width: '24px', height: '24px' }}
+                />
               </a>
             )}
           </>
