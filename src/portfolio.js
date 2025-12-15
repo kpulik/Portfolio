@@ -16,6 +16,7 @@ const about = {
   social: {
     linkedin: 'https://www.linkedin.com/in/kpulik/', // LinkedIn profile link
     github: 'https://github.com/kpulik', // GitHub profile link
+    hackerrank: 'https://www.hackerrank.com/profile/kpulik', // HackerRank profile link
   },
 }
 
