@@ -12,7 +12,7 @@ const about = {
   role: 'Computer Science Student',
   description:
     'Aspiring Cybersecurity engineer, with a passion for AI, machine learning, and software engineering. Currently pursuing a CompTIA Security+ Certification along with a Bachelor of Science in Computer Science at The University of Texas at Dallas, where I work on innovative projects and continuously enhance my technical skills.',
-  resume: '/Portfolio/Kevin_Pulikkottil_Resume.pdf', // Link to your resume (update if hosted elsewhere)
+  resume: '/Portfolio/dist/Kevin_Pulikkottil_Resume.pdf', // Link to your resume (update if hosted elsewhere)
   social: {
     linkedin: 'https://www.linkedin.com/in/kpulik/', // LinkedIn profile link
     github: 'https://github.com/kpulik', // GitHub profile link
