@@ -23,6 +23,15 @@ const about = {
 // Projects section - keep same format per project [sourceCode: github, livePreivew: any link] [Uploading Images: /public/img - using it here follow format ( "./img/<img file>" ) ]
 const projects = [
   {
+    name: 'Toyota Secure Vehicle Communications',
+    description:
+      'Contributing to a UTDesign capstone team building secure data-in-motion protocols for Toyota ECUs. Implemented X25519/X448 ECDH in a Trusted Execution Environment, extended a Trusted Application state machine with Ethernet transport, and helped deliver an Arm64 QEMU off-target emulation and Python-based attack-mitigation demo for UTDesign Expo stakeholders.',
+    image: '/Portfolio/img/toyota-logo.svg',
+    stack: ['C/C++', 'Python', 'Arm64 QEMU', 'TEE', 'X25519', 'X448', 'Ethernet'],
+    sourceCode: '',
+    livePreview: '',
+  },
+  {
     name: 'Breast Cancer Detection Model',
     description:
       'Developed a machine learning model using the Breast Cancer Wisconsin Dataset in Python to classify diagnoses with 92% accuracy, improving the initial model accuracy by 10%.',
@@ -83,28 +92,40 @@ const projects = [
 // Skills section
 const skills = [
   'Java',
-  'C++',
-  'MIPS Assembly',
-  'Python',
+  'C/C++',
   'SQL',
-  'Haskell',
-  'Prolog',
+  'Arm64 QEMU',
+  'Trusted Execution Environment (TEE)',
+  'X25519 / X448 ECDH',
+  'Ethernet',
+  'Object-Oriented Design',
+  'Software Design Patterns',
+  'UNIX Systems Programming',
+  'Database Design & Normalization',
+  'Network Security',
+  'Firewalls',
+  'Cloud Security',
+  'AWS Security Best Practices',
+  'TCP/IP',
+  'Access Control',
+  'Data Integrity',
+  'Python',
   'AWS',
   'Git',
-  'Data Visualization',
-  'Jupyter Notebooks',
-  'TensorFlow',
-  'Neural Networks',
-  'CNN',
-  'YOLOv3',
-  'Network Security',
-  'Cloud Billing',
   'Algorithms',
   'Data Structures',
 ]
 
 // Experience section - Work and Volunteering
 const experience = [
+  {
+    title: 'Vehicle Cybersecurity Engineer, Embedded Security Project',
+    company: 'Toyota Secure Vehicle Communications, UTDesign Capstone Project',
+    location: 'The University of Texas at Dallas',
+    date: 'Jan 2026 - Present',
+    description:
+      'Developing secure ECU communication for a secure EV charging use case aligned with Toyota TMNA Product Cybersecurity Group standards, including ECDH implementation in a Trusted Execution Environment and off-target firmware testing with Arm64 QEMU.',
+  },
   {
     title: 'AI Research Program Participant',
     company: 'Algoverse Coding Academy',

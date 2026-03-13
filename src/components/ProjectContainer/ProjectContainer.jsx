@@ -6,6 +6,16 @@ import './ProjectContainer.css'
 const ProjectContainer = ({ project }) => (
   <div className='project'>
 
+    {/* Project Logo/Image */}
+    {project.image && (
+      <img
+        src={project.image}
+        alt={`${project.name} logo`}
+        className='project__image'
+        loading='lazy'
+      />
+    )}
+
     {/* Project Name */}
     <h3>{project.name}</h3>
 
