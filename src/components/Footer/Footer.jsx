@@ -2,10 +2,10 @@ import './Footer.css'
 
 const Footer = () => (
   <footer className='footer'>
-    <a
-    >
-      Created with GDSC at UTDallas
-    </a>
+    <p className='footer__text'>
+      Designed &amp; built by{' '}
+      <span className='footer__name'>Kevin Pulikkottil</span>
+    </p>
   </footer>
 )
 

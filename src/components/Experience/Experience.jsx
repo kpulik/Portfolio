@@ -1,67 +1,41 @@
-import { useContext } from 'react';
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import { experience, education } from '../../portfolio';
-import { ThemeContext } from '../../contexts/theme';
+import { experience, education } from '../../portfolio'
+import './Experience.css'
 
 const Experience = () => {
-  const [{ themeName }] = useContext(ThemeContext);
+  const items = [
+    ...education.map(e => ({
+      type: 'education',
+      date: e.date,
+      title: e.degree,
+      subtitle: `${e.school} · ${e.location}`,
+      desc: e.description,
+    })),
+    ...experience.map(e => ({
+      type: 'work',
+      date: e.date,
+      title: e.title,
+      subtitle: `${e.company} · ${e.location}`,
+      desc: e.description,
+    })),
+  ]
 
-  // Use CSS variables from the theme
-  const primaryColor = themeName === 'dark' ? 'var(--clr-primary)' : 'var(--clr-primary)';
+  if (!items.length) return null
 
   return (
-    <section className="section experience" id="experience">
-
-      {/* Education Title */}
-      <h2 className="section__title">Experience</h2>
-
-      {/* Uses react-vertical-timeline-component package */}
-      {/* Vertical Line (make sure to leave lineColor empty)*/}
-      <VerticalTimeline lineColor={''}>
-
-        {/* Work Experience Points */}
-        {experience.map((exp, index) => (
-          <VerticalTimelineElement
-            key={index}
-            className="vertical-timeline-element--work"
-            date={exp.date}
-            iconStyle={{ background: 'var(--clr-primary)', color: '#fff' }}
-          >
-
-            {/* Stuff inside the Block */}
-            <h3 className="vertical-timeline-element-title">{exp.title}</h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              {exp.company} - {exp.location}
-            </h4>
-            <p>{exp.description}</p>
-
-
-          </VerticalTimelineElement>
+    <section className='section experience' id='experience'>
+      <h2 className='section__title'>Experience</h2>
+      <div className='timeline'>
+        {items.map((item, i) => (
+          <div key={i} className={`timeline-item timeline-item--${item.type}`}>
+            <div className='timeline-date'>{item.date}</div>
+            <h3 className='timeline-title'>{item.title}</h3>
+            <div className='timeline-subtitle'>{item.subtitle}</div>
+            <p className='timeline-desc'>{item.desc}</p>
+          </div>
         ))}
-
-        {/* Education Points */}
-        {education.map((edu, index) => (
-          <VerticalTimelineElement
-            key={index}
-            className="vertical-timeline-element--education"
-            date={edu.date}
-            iconStyle={{ background: 'var(--clr-primary)', color: '#fff' }}
-          >
-            
-            {/* Stuff inside the Block */}
-            <h3 className="vertical-timeline-element-title">{edu.degree}</h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              {edu.school} - {edu.location}
-            </h4>
-            <p>{edu.description}</p>
-
-
-          </VerticalTimelineElement>
-        ))}
-      </VerticalTimeline>
+      </div>
     </section>
-  );
-};
+  )
+}
 
-export default Experience;
+export default Experience

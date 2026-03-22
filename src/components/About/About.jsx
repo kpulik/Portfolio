@@ -1,81 +1,95 @@
+import { useState, useEffect } from 'react'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import { about } from '../../portfolio'
 import './About.css'
 
+const roles = ['Cybersecurity Engineer', 'AI / ML Developer', 'Software Engineer']
+
 const About = () => {
-  const { name, role, description, resume, social } = about
+  const { name, description, resume, social } = about
+  const [roleIndex, setRoleIndex] = useState(0)
+  const [visible, setVisible] = useState(true)
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setVisible(false)
+      setTimeout(() => {
+        setRoleIndex(i => (i + 1) % roles.length)
+        setVisible(true)
+      }, 350)
+    }, 3200)
+    return () => clearInterval(id)
+  }, [])
 
   return (
-    <div className='about center'>
-      {/* Name Section */}
-      {name && (
-        <h1 className='about_header'>
-          Hi, I am <span className='about__name'>{name}.</span>
-        </h1>
-      )}
+    <section className='about' id='about'>
+      <div className='about__eyebrow'>
+        <span className='about__dot' aria-hidden='true' />
+        Available &middot; Graduating May 2026
+      </div>
 
-      {/* Description */}
-      {role && <h2 className='about__role'>A {role}.</h2>}
-      <p className='about__desc'>{description && description}</p>
+      {name && <h1 className='about__name'>{name}</h1>}
 
-      {/* Resume Button */}
-      <div className='about__contact center'>
+      <div className='about__role-wrapper' aria-live='polite'>
+        <span className={`about__role${visible ? ' about__role--in' : ' about__role--out'}`}>
+          {roles[roleIndex]}
+        </span>
+      </div>
+
+      {description && <p className='about__desc'>{description}</p>}
+
+      <div className='about__actions'>
         {resume && (
-          <a href={resume}>
-            <span type='button' className='btn btn--outline'>
-              Resume
-            </span>
+          <a
+            href={resume}
+            className='btn btn--outline'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            View Resume ↗
           </a>
         )}
 
-        {/* Social Links: Github and LinkedIn */}
         {social && (
-          <>
+          <div className='about__social'>
             {social.github && (
               <a
                 href={social.github}
-                aria-label='github'
-                className='link link--icon'
+                aria-label='GitHub'
+                className='about__social-link link--icon'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <GitHubIcon />
               </a>
             )}
-
             {social.linkedin && (
               <a
                 href={social.linkedin}
-                aria-label='linkedin'
-                className='link link--icon'
+                aria-label='LinkedIn'
+                className='about__social-link link--icon'
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <LinkedInIcon />
               </a>
             )}
-
             {social.hackerrank && (
               <a
                 href={social.hackerrank}
-                aria-label='hackerrank'
-                className='link link--icon'
-                style={{ 
-                  backgroundColor: '#1e2432', 
-                  padding: '8px 12px', 
-                  borderRadius: '6px',
-                  display: 'inline-flex',
-                  alignItems: 'center'
-                }}
+                aria-label='HackerRank'
+                className='about__social-link about__hackerrank link--icon'
+                target='_blank'
+                rel='noopener noreferrer'
               >
-                <img 
-                  src='/Portfolio/hackerrank-logo.svg' 
-                  alt='HackerRank' 
-                  style={{ width: '140px', height: 'auto', display: 'block' }}
-                />
+                <img src='/Portfolio/img/hackerrank-icon.webp' alt='HackerRank' />
               </a>
             )}
-          </>
+          </div>
         )}
       </div>
-    </div>
+    </section>
   )
 }
 

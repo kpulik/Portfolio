@@ -1,28 +1,54 @@
-import uniqid from 'uniqid';
+import uniqid from 'uniqid'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LaunchIcon from '@mui/icons-material/Launch'
 import './ProjectContainer.css'
 
-const ProjectContainer = ({ project }) => (
-  <div className='project'>
+const ProjectContainer = ({ project, index }) => (
+  <article className='project'>
+    <div className='project__header'>
+      <span className='project__num'>
+        {String(index + 1).padStart(2, '0')}
+      </span>
+      <div className='project__links'>
+        {project.sourceCode && (
+          <a
+            href={project.sourceCode}
+            aria-label='source code'
+            className='project__link link--icon'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <GitHubIcon fontSize='small' />
+          </a>
+        )}
+        {project.livePreview && (
+          <a
+            href={project.livePreview}
+            aria-label='live preview'
+            className='project__link link--icon'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <LaunchIcon fontSize='small' />
+          </a>
+        )}
+      </div>
+    </div>
 
-    {/* Project Logo/Image */}
     {project.image && (
-      <img
-        src={project.image}
-        alt={`${project.name} logo`}
-        className='project__image'
-        loading='lazy'
-      />
+      <div className='project__image-wrapper'>
+        <img
+          src={project.image}
+          alt={`${project.name} logo`}
+          className='project__image'
+          loading='lazy'
+        />
+      </div>
     )}
 
-    {/* Project Name */}
-    <h3>{project.name}</h3>
-
-    {/* Project Description */}
+    <h3 className='project__name'>{project.name}</h3>
     <p className='project__description'>{project.description}</p>
 
-    {/* Project Stack[Skills] */}
     {project.stack && (
       <ul className='project__stack'>
         {project.stack.map((item) => (
@@ -32,29 +58,7 @@ const ProjectContainer = ({ project }) => (
         ))}
       </ul>
     )}
-
-    {/* Project GitHub */}
-    {project.sourceCode && (
-      <a
-        href={project.sourceCode}
-        aria-label='source code'
-        className='link link--icon'
-      >
-        <GitHubIcon />
-      </a>
-    )}
-
-    {/* Project Link */}
-    {project.livePreview && (
-      <a
-        href={project.livePreview}
-        aria-label='live preview'
-        className='link link--icon'
-      >
-        <LaunchIcon />
-      </a>
-    )}
-  </div>
+  </article>
 )
 
 export default ProjectContainer

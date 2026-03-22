@@ -2,21 +2,24 @@ import { contact } from '../../portfolio'
 import './Contact.css'
 
 const Contact = () => {
-  // If Contact ifno is empty in portfolio.js, returns nothing
   if (!contact.email) return null
 
   return (
-    <section className='section contact center' id='contact'>
-
-      {/* Title */}
+    <section className='section contact' id='contact'>
       <h2 className='section__title'>Contact</h2>
-
-      {/* Email Button */}
-      <a href={`mailto:${contact.email}`}>
-        <span type='button' className='btn btn--outline'>
-          Email Me
-        </span>
-      </a>
+      <div className='contact__wrapper'>
+        <p className='contact__copy'>
+          I&rsquo;m currently open to new opportunities. Whether you have a
+          question, want to collaborate, or just want to say hi, my inbox is
+          always open.
+        </p>
+        <a
+          href={`mailto:${contact.email}`}
+          className='btn btn--outline contact__btn'
+        >
+          Say Hello ↗
+        </a>
+      </div>
     </section>
   )
 }

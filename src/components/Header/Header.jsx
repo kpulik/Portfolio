@@ -3,19 +3,13 @@ import Navbar from '../Navbar/Navbar'
 import './Header.css'
 
 const Header = () => {
-  const { homepage, title } = header
+  const { homepage } = header
 
   return (
-    <header className="header app">
-      <h3>
-        {homepage ? (
-          <a href={homepage} className='link'>
-            {title}
-          </a>
-        ) : (
-          title
-        )}
-      </h3>
+    <header className='header'>
+      <a href={homepage} className='header__logo' aria-label='home'>
+        KP
+      </a>
       <Navbar />
     </header>
   )

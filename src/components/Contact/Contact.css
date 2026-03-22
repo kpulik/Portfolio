@@ -1,3 +1,23 @@
-.contact {
-  flex-direction: column;
+.contact__wrapper {
+  max-width: 520px;
+}
+
+.contact__copy {
+  font-size: 1rem;
+  color: var(--clr-fg-alt);
+  line-height: 1.8;
+  margin-bottom: 2em;
+}
+
+.contact__btn {
+  font-size: 1rem;
+  padding: 0.8em 2.2em;
+  margin-bottom: 1.25em;
+}
+
+.contact__email {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--clr-fg-muted);
+  letter-spacing: 0.04em;
 }

@@ -160,6 +160,17 @@ const contact = {
   email: 'kevinpul101@gmail.com',
 }
 
+// Certifications section
+const certifications = [
+  {
+    name: 'CompTIA Security+',
+    issuer: 'CompTIA',
+    date: '2026',
+    status: 'In Progress', // Change to 'Earned' once obtained
+    credentialId: '',       // Add credential ID once earned
+  },
+]
+
 // Important: If you add extra sections, make sure to export them here
 // Export all sections so they can be used in other files
-export { header, about, projects, skills, experience, education, contact }
+export { header, about, projects, skills, experience, education, contact, certifications }

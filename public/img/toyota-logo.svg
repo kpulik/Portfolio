@@ -1,11 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
   <title id="title">Toyota Project Logo</title>
   <desc id="desc">Stylized red emblem with Toyota wordmark for project card use.</desc>
-  <rect width="960" height="540" fill="#ffffff"/>
   <g fill="none" stroke="#eb0a1e" stroke-width="20" stroke-linecap="round" stroke-linejoin="round">
     <ellipse cx="480" cy="210" rx="220" ry="130"/>
     <ellipse cx="480" cy="210" rx="75" ry="125"/>
     <ellipse cx="480" cy="210" rx="170" ry="55"/>
   </g>
-  <text x="480" y="420" text-anchor="middle" fill="#eb0a1e" font-size="84" font-family="Arial, Helvetica, sans-serif" font-weight="700" letter-spacing="10">TOYOTA</text>
+  <text x="480" y="420" text-anchor="middle" fill="#eb0a1e" font-size="84" font-family="sans-serif" font-weight="700" letter-spacing="10">TOYOTA</text>
 </svg>
