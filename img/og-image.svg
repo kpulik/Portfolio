@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0a0d14"/>
+
+  <!-- Subtle grid lines -->
+  <line x1="0" y1="315" x2="1200" y2="315" stroke="#1a2235" stroke-width="1"/>
+  <line x1="600" y1="0" x2="600" y2="630" stroke="#1a2235" stroke-width="1"/>
+
+  <!-- Accent bar -->
+  <rect x="80" y="180" width="4" height="120" rx="2" fill="#22d3ee"/>
+
+  <!-- Name -->
+  <text x="104" y="242" font-family="system-ui, sans-serif" font-weight="700" font-size="64" fill="#e8edf5">Kevin Pulikkottil</text>
+
+  <!-- Role -->
+  <text x="104" y="298" font-family="system-ui, sans-serif" font-weight="400" font-size="28" fill="#22d3ee">Cybersecurity Engineer &amp; AI / ML Developer</text>
+
+  <!-- Sub -->
+  <text x="104" y="342" font-family="system-ui, sans-serif" font-weight="400" font-size="22" fill="#50637a">CS Student @ UT Dallas · Graduating May 2026</text>
+
+  <!-- KP monogram -->
+  <text x="1120" y="580" font-family="system-ui, sans-serif" font-weight="700" font-size="52" fill="#22d3ee" text-anchor="middle" opacity="0.12">KP</text>
+
+  <!-- Decorative dots -->
+  <circle cx="1080" cy="180" r="3" fill="#22d3ee" opacity="0.4"/>
+  <circle cx="1100" cy="180" r="3" fill="#22d3ee" opacity="0.25"/>
+  <circle cx="1120" cy="180" r="3" fill="#22d3ee" opacity="0.15"/>
+</svg>
