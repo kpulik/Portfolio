@@ -32,7 +32,8 @@ const Contact = () => {
           <div className='contact__support'>
             <p className='contact__support-title'>Enjoying my work?</p>
             <p className='contact__support-copy'>
-              Scan this QR code to support my projects on Buy Me a Coffee.
+              Scan this QR code or click the button below to support my
+              projects on Buy Me a Coffee.
             </p>
             <div className='contact__qr-block'>
               <span className='contact__qr-frame'>
@@ -44,7 +45,7 @@ const Contact = () => {
                 />
               </span>
               <span className='contact__qr-caption'>
-                Scan to buy me a coffee.
+                Scan the QR code, or click the button below.
               </span>
             </div>
 
