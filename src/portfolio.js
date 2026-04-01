@@ -158,6 +158,8 @@ const education = [
 // Contact section - (optional)
 const contact = {
   email: 'kevinpul101@gmail.com',
+  buyMeACoffee: 'https://buymeacoffee.com/kpulik',
+  buyMeACoffeeQr: '/Portfolio/img/buy-me-a-coffee-qr.png',
 }
 
 // Certifications section
