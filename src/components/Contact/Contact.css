@@ -39,17 +39,11 @@
   margin-bottom: 0.95em;
 }
 
-.contact__qr-link {
+.contact__qr-block {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.7em;
-}
-
-.contact__qr-link:focus-visible {
-  outline: 2px solid var(--clr-primary);
-  outline-offset: 6px;
-  border-radius: 12px;
 }
 
 .contact__qr-frame {
@@ -74,11 +68,6 @@
 .contact__qr-caption {
   font-size: 0.84rem;
   color: var(--clr-fg-muted);
-  transition: color 0.2s ease;
-}
-
-.contact__qr-link:hover .contact__qr-caption {
-  color: var(--clr-primary);
 }
 
 .contact__support-btn {

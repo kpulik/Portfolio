@@ -34,13 +34,7 @@ const Contact = () => {
             <p className='contact__support-copy'>
               Scan this QR code to support my projects on Buy Me a Coffee.
             </p>
-            <a
-              href={contact.buyMeACoffee || '#contact'}
-              className='contact__qr-link'
-              target={contact.buyMeACoffee ? '_blank' : undefined}
-              rel={contact.buyMeACoffee ? 'noreferrer' : undefined}
-              aria-label='Open Buy Me a Coffee page'
-            >
+            <div className='contact__qr-block'>
               <span className='contact__qr-frame'>
                 <img
                   className='contact__qr-image'
@@ -50,9 +44,9 @@ const Contact = () => {
                 />
               </span>
               <span className='contact__qr-caption'>
-                Scan or tap to buy me a coffee ↗
+                Scan to buy me a coffee.
               </span>
-            </a>
+            </div>
 
             {contact.buyMeACoffee && (
               <a
