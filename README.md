@@ -43,23 +43,30 @@ To add a project image, drop the file in `public/img/` and reference it as `imag
 
 ## Deploying changes
 
-Run this every time you want to save your changes and update the live site:
+Deployment is now automatic on every push to `main`.
+
+Run this when you want to publish updates:
 
 ```bash
 git add .
 git commit -m "describe your changes"
 git push origin main
-npm run deploy
 ```
 
 What each step does:
 
-- `git push origin main` saves your source code to GitHub
-- `npm run deploy` builds the project and publishes the output to the `gh-pages` branch, which GitHub Pages serves automatically
+- `git push origin main` saves your source code to GitHub and triggers the deployment workflow
+- GitHub Actions builds the project and publishes the output to the `gh-pages` branch
 - The live site updates within 1-2 minutes after deploying
 - Hard refresh (`Cmd+Shift+R`) if the site looks stale after deploying
 
-> Do not commit the `dist/` folder to `main`. It is generated output and is handled automatically by `npm run deploy`.
+Manual fallback (optional):
+
+```bash
+npm run deploy
+```
+
+> Do not commit the `dist/` folder to `main`. It is generated output and published automatically.
 
 ---
 
