@@ -25,64 +25,88 @@ const projects = [
   {
     name: 'Toyota Secure Vehicle Communications',
     description:
-      'Contributing to a UTDesign capstone team building secure data-in-motion protocols for Toyota ECUs. Implemented X25519/X448 ECDH in a Trusted Execution Environment, extended a Trusted Application state machine with Ethernet transport, and helped deliver an Arm64 QEMU off-target emulation and Python-based attack-mitigation demo for UTDesign Expo stakeholders.',
+      'Implemented secure data-in-motion protocols for Toyota ECUs in a UTDesign capstone. Added X25519/X448 ECDH in a Trusted Execution Environment, extended a Trusted Application state machine with Ethernet transport, and validated behavior with Arm64 QEMU off-target emulation.',
     image: '/Portfolio/img/toyota-logo.svg',
     stack: ['C/C++', 'Python', 'Arm64 QEMU', 'TEE', 'X25519', 'X448', 'Ethernet'],
     sourceCode: '',
     livePreview: '',
   },
   {
-    name: 'Breast Cancer Detection Model',
+    name: 'GroupUs - GroupMe Desktop Client',
     description:
-      'Developed a machine learning model using the Breast Cancer Wisconsin Dataset in Python to classify diagnoses with 92% accuracy, improving the initial model accuracy by 10%.',
+      'Built an unofficial cross-platform GroupMe desktop client called GroupUs for macOS, Windows, and Linux. Implemented OAuth sign-in, conversation and topic filters, mute/read controls, access token management, theme customization, and in-app update checks.',
+    stack: ['TypeScript', 'JavaScript', 'Desktop App', 'OAuth', 'Cross-Platform'],
+    sourceCode: 'https://github.com/kpulik/GroupUs',
+    livePreview: '', // Add live link if available
+  },
+  {
+    name: 'VaultChat',
+    description:
+      'Built a multi-provider AI chat plugin for Obsidian with Anthropic, OpenAI, Gemini, OpenRouter, and Ollama support. Added vault-aware file context, streaming responses, diff-based file edits, and double-confirmation safeguards for file deletion.',
+    stack: ['TypeScript', 'JavaScript', 'Obsidian Plugin', 'Ollama', 'LLM Integrations'],
+    sourceCode: 'https://github.com/kpulik/VaultChat',
+    livePreview: '', // Add live link if available
+  },
+  {
+    name: 'AI Dev Utility',
+    description:
+      'Created an open-source local-first AI developer toolkit that unifies The Agency, Impeccable, PromptFoo, and MiniFish with one setup script and a local dashboard. Includes Ollama-based local inference, PromptFoo evaluation workflows, and project bootstrapping scripts.',
+    stack: ['Python', 'Shell', 'Ollama', 'PromptFoo', 'Developer Tooling'],
+    sourceCode: 'https://github.com/kpulik/ai-dev-utility',
+    livePreview: '', // Add live link if available
+  },
+  {
+    name: 'Breast Cancer Diagnostic Classifier',
+    description:
+      'Built a Random Forest classifier on the Wisconsin Diagnostic dataset to classify malignant vs. benign tumors. Performed EDA with heatmaps and violin plots to isolate top predictors, and achieved 95.6% accuracy while minimizing false negatives.',
     stack: ['Python', 'scikit-learn', 'pandas', 'NumPy'],
     sourceCode: 'https://github.com/kpulik/AI-Projects/tree/main/Breast%20Cancer%20Detector%20Project',
     livePreview: '', // Add live link if available
   },
   {
-    name: 'Handwritten Digits Recognition',
+    name: 'Handwritten Digit Classification',
     description:
-      'Built a Convolutional Neural Network (CNN) using TensorFlow and Keras to classify handwritten digits from the MNIST dataset with 98% accuracy.',
+      'Built a TensorFlow/Keras CNN for handwritten digit recognition with 98% test accuracy. Used MaxPooling and Dropout to improve generalization and model stability.',
     stack: ['Python', 'TensorFlow', 'Keras', 'CNN'],
     sourceCode: 'https://github.com/kpulik/AI-Projects/blob/main/Recognizing%20Handwritten%20Digits%20(Sp24_project1).ipynb',
     livePreview: '', // Add live link if available
   },
   {
-    name: 'Predicting Diabetes Metrics',
+    name: 'Diabetes Progression Regression',
     description:
-      'Created a regression model in Python with scikit-learn to predict patient diabetes metrics, achieving a 15% improvement in predictive accuracy through feature engineering.',
+      'Improved baseline predictive accuracy by 15% using feature engineering (polynomial and interaction terms) with Ridge Regression (L2) to reduce multicollinearity.',
     stack: ['Python', 'scikit-learn', 'Regression'],
     sourceCode: 'https://github.com/kpulik/AI-Projects/blob/main/Predicting%20Diabetes%20Metrics%20(Sp24_project2).ipynb',
     livePreview: '', // Add live link if available
   },
   {
-    name: 'NLP for Text Summarization',
+    name: 'Transformer Text Summarization',
     description:
-      'Developed a Transformer-based NLP model using TensorFlow and Hugging Face Transformers to summarize text with an 85% compression rate and 90% coherence.',
+      'Developed a Hugging Face and TensorFlow summarization pipeline with 85% compression and 90% semantic coherence, preserving long-range context with transformer self-attention.',
     stack: ['Python', 'TensorFlow', 'Hugging Face', 'NLP'],
     sourceCode: 'https://github.com/kpulik/AI-Projects/blob/main/Natural_Language_Processing.ipynb',
     livePreview: '', // Add live link if available
   },
   {
-    name: 'Fine-Tuning YOLO Algorithm',
+    name: 'Automotive Drowsiness Detection',
     description:
-      'Fine-tuned YOLOv3 for real-time object detection on a custom dataset using Python, OpenCV, and TensorFlow, improving detection precision by 5%.',
-    stack: ['Python', 'OpenCV', 'TensorFlow', 'YOLOv3'],
+      'Fine-tuned YOLOv5s to classify awake vs. drowsy states for driver monitoring. Built the end-to-end pipeline with custom webcam data collection, CVAT annotation, transfer learning on T4 GPUs, and OpenCV real-time inference.',
+    stack: ['Python', 'PyTorch', 'OpenCV', 'YOLOv5'],
     sourceCode: 'https://github.com/kpulik/AI-Projects/blob/main/Fine_tuning_YOLO_Algorithm.ipynb',
     livePreview: '', // Add live link if available
   },
   {
     name: 'Linear Algebra Matrix Operations',
     description:
-      'Built a Python program to perform matrix operations including rank, determinants, and eigenvalues.',
-    stack: ['Python'],
+      'Developed a Python CLI for matrix operations including rank, determinant, inverse, eigenvalues, nullity, and linear independence checks. Supports targeted operations or full-suite execution on user-defined matrix dimensions.',
+    stack: ['Python', 'Linear Algebra'],
     sourceCode: 'https://github.com/kpulik/Linear-Algebra-Matrix-Operations-Program',
     livePreview: '', // https://kpulik.github.io/Linear-Algebra-Matrix-Operations-Program/
   },
   {
-    name: 'Stock Analysis Program',
+    name: 'Quantitative Stock and Option Analysis',
     description:
-      'Developed a tool using Python, Matplotlib, and the Finnhub API to analyze stock data and calculate option prices with real-time visualization.',
+      'Built a Python quantitative finance tool that prices options with Black-Scholes using live Finnhub market data. Estimated volatility from log returns and visualized price trends with Matplotlib and linear regression.',
     stack: ['Python', 'Matplotlib', 'API'],
     sourceCode: 'https://github.com/kpulik/Stock-Analysis-Program',
     livePreview: '', // https://kpulik.github.io/Stock-Analysis-Program/
