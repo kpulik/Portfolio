@@ -186,6 +186,19 @@ const contact = {
   buyMeACoffeeQr: '/Portfolio/img/buy-me-a-coffee-qr.png',
 }
 
+// Open Source Contributions section
+const contributions = [
+  {
+    project: 'MemPalace',
+    projectUrl: 'https://github.com/milla-jovovich/mempalace',
+    description:
+      'Added a first-class mempalace mcp CLI subcommand, improved MCP setup documentation including custom palace path guidance, and added regression tests for CLI behavior.',
+    pr: 'https://github.com/milla-jovovich/mempalace/pull/315',
+    issue: 'https://github.com/milla-jovovich/mempalace/issues/296',
+    stack: ['Python', 'CLI', 'MCP'],
+  },
+]
+
 // Certifications section
 const certifications = [
   {
@@ -199,4 +212,4 @@ const certifications = [
 
 // Important: If you add extra sections, make sure to export them here
 // Export all sections so they can be used in other files
-export { header, about, projects, skills, experience, education, contact, certifications }
+export { header, about, projects, skills, experience, education, contact, contributions, certifications }

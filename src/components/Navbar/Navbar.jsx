@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import Brightness2Icon from '@mui/icons-material/Brightness2'
 import WbSunnyRoundedIcon from '@mui/icons-material/WbSunnyRounded'
 import { ThemeContext } from '../../contexts/theme'
-import { projects, skills, experience, contact } from '../../portfolio'
+import { projects, skills, experience, contributions, contact } from '../../portfolio'
 import './Navbar.css'
 
 const Navbar = () => {
@@ -35,6 +35,14 @@ const Navbar = () => {
           <li className='nav__list-item'>
             <a href='#experience' className='link link--nav'>
               Experience
+            </a>
+          </li>
+        ) : null}
+
+        {contributions.length ? (
+          <li className='nav__list-item'>
+            <a href='#contributions' className='link link--nav'>
+              Open Source
             </a>
           </li>
         ) : null}
