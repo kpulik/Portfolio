@@ -11,7 +11,7 @@ const about = {
   name: 'Kevin Pulikkottil',
   role: 'Computer Science Student',
   description:
-    'Aspiring Cybersecurity engineer, with a passion for AI, machine learning, and software engineering. Currently pursuing a CompTIA Security+ Certification along with a Bachelor of Science in Computer Science at The University of Texas at Dallas, where I work on innovative projects and continuously enhance my technical skills.',
+    'Aspiring Cybersecurity engineer, with a passion for AI, machine learning, and software engineering. CompTIA Security+ certified (April 25, 2026) and pursuing a Bachelor of Science in Computer Science at The University of Texas at Dallas, where I work on innovative projects and continuously enhance my technical skills.',
   resume: '/Portfolio/Kevin_Pulikkottil_Resume.pdf', // Link to your resume (update if hosted elsewhere)
   social: {
     linkedin: 'https://www.linkedin.com/in/kpulik/', // LinkedIn profile link
@@ -204,9 +204,10 @@ const certifications = [
   {
     name: 'CompTIA Security+',
     issuer: 'CompTIA',
-    date: '2026',
-    status: 'In Progress', // Change to 'Earned' once obtained
-    credentialId: '',       // Add credential ID once earned
+    date: 'April 25, 2026',
+    status: 'Earned',
+    credentialUrl: 'https://www.credly.com/badges/4d9f54e1-9175-46d3-83b6-6a15f706a8fa',
+    image: 'https://images.credly.com/size/680x680/images/80d8a06a-c384-42bf-ad36-db81bce5adce/blob',
   },
 ]
 

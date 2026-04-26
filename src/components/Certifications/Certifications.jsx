@@ -11,9 +11,30 @@ const Certifications = () => {
         {certifications.map((cert) => (
           <li key={cert.name} className='cert__item'>
             <div className='cert__left'>
-              <span className='cert__name'>{cert.name}</span>
-              <span className='cert__issuer'>{cert.issuer} &middot; {cert.date}</span>
+              {cert.image && (
+                <a href={cert.credentialUrl} target='_blank' rel='noopener noreferrer' className='cert__logo-link'>
+                  <img src={cert.image} alt={`${cert.name} badge`} className='cert__logo' />
+                </a>
+              )}
+
+              <div className='cert__meta'>
+                <span className='cert__name'>{cert.name}</span>
+                <span className='cert__issuer'>{cert.issuer}</span>
+                <span className='cert__date'>Earned: {cert.date}</span>
+                {cert.credentialUrl && (
+                  <a
+                    href={cert.credentialUrl}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='cert__verify'
+                    aria-label={`Verify ${cert.name} credential`}
+                  >
+                    Verify
+                  </a>
+                )}
+              </div>
             </div>
+
             <span className={`cert__badge cert__badge--${cert.status === 'Earned' ? 'earned' : 'progress'}`}>
               {cert.status}
             </span>

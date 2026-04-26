@@ -22,11 +22,11 @@ const App = () => {
       <Header />
       <main>
         <About />
+        <Certifications />
         <Projects />
         <Skills />
         <Experience />
         <Contributions />
-        <Certifications />
         <Contact />
       </main>
       <ScrollToTop />
