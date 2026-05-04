@@ -44,6 +44,13 @@
   flex-shrink: 0;
 }
 
+/* Larger logo variant for badges that have small icon artwork (e.g., CompTIA) */
+.cert__item--large-logo .cert__logo {
+  width: 88px;
+  height: 88px;
+  padding: 8px;
+}
+
 .cert__meta {
   display: flex;
   flex-direction: column;

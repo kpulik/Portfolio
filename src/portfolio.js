@@ -16,6 +16,7 @@ const about = {
   social: {
     linkedin: 'https://www.linkedin.com/in/kpulik/', // LinkedIn profile link
     github: 'https://github.com/kpulik', // GitHub profile link
+    tryhackme: 'https://tryhackme.com/p/kevinpul101', // TryHackMe profile link
     hackerrank: 'https://www.hackerrank.com/profile/kpulik', // HackerRank profile link
   },
 }
@@ -143,7 +144,7 @@ const skills = [
 // Experience section - Work and Volunteering
 const experience = [
   {
-    title: 'Vehicle Cybersecurity Engineer, Embedded Security Project',
+    title: 'Vehicle Cybersecurity Engineering Intern',
     company: 'Toyota Secure Vehicle Communications, UTDesign Capstone Project',
     location: 'The University of Texas at Dallas',
     date: 'Jan 2026 - Present',

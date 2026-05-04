@@ -9,7 +9,10 @@ const Certifications = () => {
       <h2 className='section__title'>Certifications</h2>
       <ul className='cert__list'>
         {certifications.map((cert) => (
-          <li key={cert.name} className='cert__item'>
+          <li
+            key={cert.name}
+            className={`cert__item ${cert.issuer === 'CompTIA' || cert.name?.toLowerCase().includes('comptia') ? 'cert__item--large-logo' : ''}`}
+          >
             <div className='cert__left'>
               {cert.image && (
                 <a href={cert.credentialUrl} target='_blank' rel='noopener noreferrer' className='cert__logo-link'>

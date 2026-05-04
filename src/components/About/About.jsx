@@ -75,6 +75,17 @@ const About = () => {
                 <LinkedInIcon />
               </a>
             )}
+            {social.tryhackme && (
+              <a
+                href={social.tryhackme}
+                aria-label='TryHackMe'
+                className='about__social-link about__tryhackme link--icon'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <img src='/Portfolio/img/tryhackme-icon.svg' alt='TryHackMe' />
+              </a>
+            )}
             {social.hackerrank && (
               <a
                 href={social.hackerrank}
