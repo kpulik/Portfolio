@@ -9,9 +9,9 @@ const header = {
 // About section
 const about = {
   name: 'Kevin Pulikkottil',
-  role: 'Computer Science Student',
+  role: 'Computer Science Graduate',
   description:
-    'Aspiring Cybersecurity engineer, with a passion for AI, machine learning, and software engineering. CompTIA Security+ certified (April 25, 2026) and pursuing a Bachelor of Science in Computer Science at The University of Texas at Dallas, where I work on innovative projects and continuously enhance my technical skills.',
+    'Computer Science graduate with experience in software development, systems design, and network security, seeking entry-level Software or Cybersecurity Engineer roles. CompTIA Security+ certified and CDSA (HackTheBox) in progress. Earned a Bachelor of Science in Computer Science from The University of Texas at Dallas.',
   resume: '/Portfolio/Kevin_Pulikkottil_Resume.pdf', // Link to your resume (update if hosted elsewhere)
   social: {
     linkedin: 'https://www.linkedin.com/in/kpulik/', // LinkedIn profile link
@@ -26,9 +26,17 @@ const projects = [
   {
     name: 'Toyota Secure Vehicle Communications',
     description:
-      'Implemented secure data-in-motion protocols for Toyota ECUs in a UTDesign capstone. Added X25519/X448 ECDH in a Trusted Execution Environment, extended a Trusted Application state machine with Ethernet transport, and validated behavior with Arm64 QEMU off-target emulation.',
+      'Built an end-to-end, X448-based, rekey-capable EV charging handshake in the OP-TEE Trusted Application and host client, meeting Toyota TMNA Product Cybersecurity standards for the ISO 15118-20 use case. Replaced the team\'s PyQt6 desktop demo with a browser-based dashboard for the UTDesign EXPO, visualizing live MITM attack detection between EV, EVSE, and a Raspberry Pi attacker node.',
     image: '/Portfolio/img/toyota-logo.svg',
-    stack: ['C/C++', 'Python', 'Arm64 QEMU', 'TEE', 'X25519', 'X448', 'Ethernet'],
+    stack: ['C/C++', 'Python', 'Arm64 QEMU', 'TEE', 'X448'],
+    sourceCode: '',
+    livePreview: '',
+  },
+  {
+    name: 'Secure Home Lab on Raspberry Pi',
+    description:
+      'Reduced network ad traffic by 99% by deploying a Pi-hole DNS sinkhole reachable remotely over a Tailscale tailnet. Implemented custom firewall rules, strict access controls, and active DNS query log monitoring.',
+    stack: ['Raspberry Pi', 'Linux', 'Tailscale', 'Pi-hole', 'DNS', 'Firewall'],
     sourceCode: '',
     livePreview: '',
   },
@@ -117,45 +125,41 @@ const projects = [
 // Skills section
 const skills = [
   'Java',
+  'Python',
   'C/C++',
   'SQL',
-  'Arm64 QEMU',
-  'Trusted Execution Environment (TEE)',
-  'X25519 / X448 ECDH',
-  'Ethernet',
   'Object-Oriented Design',
+  'Data Structures',
+  'Algorithms',
   'Software Design Patterns',
   'UNIX Systems Programming',
   'Database Design & Normalization',
+  'Git',
+  'Linux',
+  'Arm64 QEMU',
+  'Raspberry Pi',
   'Network Security',
   'Firewalls',
-  'Cloud Security',
-  'AWS Security Best Practices',
-  'TCP/IP',
+  'Network Protocols (OSI Model, TCP/IP)',
   'Access Control',
   'Data Integrity',
-  'Python',
-  'AWS',
-  'Git',
-  'Algorithms',
-  'Data Structures',
 ]
 
 // Experience section - Work and Volunteering
 const experience = [
   {
-    title: 'Vehicle Cybersecurity Engineering Intern',
+    title: 'Vehicle Cybersecurity Engineer, Embedded Security Project',
     company: 'Toyota Secure Vehicle Communications, UTDesign Capstone Project',
     location: 'The University of Texas at Dallas',
-    date: 'Jan 2026 - Present',
+    date: 'Jan 2026 - May 2026',
     description:
-      'Developing secure ECU communication for a secure EV charging use case aligned with Toyota TMNA Product Cybersecurity Group standards, including ECDH implementation in a Trusted Execution Environment and off-target firmware testing with Arm64 QEMU.',
+      'Built an end-to-end, X448-based, rekey-capable EV charging handshake in the OP-TEE Trusted Application and host client, meeting Toyota TMNA Product Cybersecurity standards for the ISO 15118-20 use case. Implemented X448 ECDH (RFC 8418) for ephemeral session keys and stabilized X.509 certificates across sessions by refactoring the custom CMAC extension.',
   },
   {
     title: 'AI Research Program Participant',
     company: 'Algoverse Coding Academy',
     location: 'Online',
-    date: 'Feb 2024',
+    date: 'Feb 2024 - May 2024',
     description:
       'Participated in an AI research program where I developed multiple machine learning models including a Breast Cancer Detection Model, Handwritten Digit Recognition, and more.',
   },
@@ -176,7 +180,7 @@ const education = [
     school: 'University of Texas at Dallas',
     location: 'Richardson, TX',
     date: 'May 2026',
-    description: 'Focused on software engineering, data structures, algorithms, and backend development.',
+    description: 'Coursework: Database Systems, Computer Networks, Networking Laboratory, Operating Systems, Data Structures & Algorithm Analysis, Software Engineering, Digital Logic & Computer Design.',
   },
 ]
 
@@ -209,6 +213,22 @@ const certifications = [
     status: 'Earned',
     credentialUrl: 'https://www.credly.com/badges/4d9f54e1-9175-46d3-83b6-6a15f706a8fa',
     image: 'https://images.credly.com/size/680x680/images/80d8a06a-c384-42bf-ad36-db81bce5adce/blob',
+  },
+  {
+    name: 'CDSA (Certified Defensive Security Analyst)',
+    issuer: 'HackTheBox',
+    date: '',
+    status: 'In Progress',
+    credentialUrl: '',
+    image: '',
+  },
+  {
+    name: 'Eagle Scout',
+    issuer: 'Scouting America',
+    date: 'January 2021',
+    status: 'Earned',
+    credentialUrl: '',
+    image: '',
   },
 ]
 
