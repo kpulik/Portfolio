@@ -26,7 +26,7 @@ const About = () => {
     <section className='about' id='about'>
       <div className='about__eyebrow'>
         <span className='about__dot' aria-hidden='true' />
-        Available &middot; Graduating May 2026
+        Available &middot; Graduated May 2026
       </div>
 
       {name && <h1 className='about__name'>{name}</h1>}
