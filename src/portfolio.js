@@ -149,7 +149,7 @@ const skills = [
 const experience = [
   {
     title: 'Vehicle Cybersecurity Engineer, Embedded Security Project',
-    company: 'Toyota Secure Vehicle Communications, UTDesign Capstone Project',
+    company: 'Toyota Tsusho America, UTDesign Capstone Project',
     location: 'The University of Texas at Dallas',
     date: 'Jan 2026 - May 2026',
     description:
@@ -167,7 +167,7 @@ const experience = [
     title: 'Member',
     company: 'Google Developer Student Clubs (GDSC)',
     location: 'University of Texas at Dallas',
-    date: '2022 - Present',
+    date: '2022 - 2026',
     description:
       'Engaged in hands-on workshops and collaborative projects on web development and AI, enhancing technical skills and real-world problem-solving.',
   },
