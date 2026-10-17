@@ -11,8 +11,8 @@ const about = {
   name: 'Kevin Pulikkottil',
   role: 'Computer Science Graduate',
   description:
-    'Computer Science graduate with experience in software development, systems design, and network security, seeking entry-level Software or Cybersecurity Engineer roles. CompTIA Security+ certified and CDSA (HackTheBox) in progress. Earned a Bachelor of Science in Computer Science from The University of Texas at Dallas.',
-  resume: '/Portfolio/Kevin_Pulikkottil_Resume.pdf', // Link to your resume (update if hosted elsewhere)
+    'Computer Science graduate from UT Dallas, based in San Jose, CA, focused on cybersecurity and software engineering. CompTIA Security+ certified, with experience building detection engineering tools, security APIs, and an OP-TEE vehicle communications prototype. Open to entry-level cybersecurity and software engineering roles.',
+  resume: '/Portfolio/Kevin_Pulikkottil_Resume.pdf?v=20261017', // Version the link when replacing the PDF
   social: {
     linkedin: 'https://www.linkedin.com/in/kpulik/', // LinkedIn profile link
     github: 'https://github.com/kpulik', // GitHub profile link
@@ -24,9 +24,25 @@ const about = {
 // Projects section - keep same format per project [sourceCode: github, livePreivew: any link] [Uploading Images: /public/img - using it here follow format ( "./img/<img file>" ) ]
 const projects = [
   {
+    name: 'AutoSIEM — Detection Engineering & SOC Investigation',
+    description:
+      'Developed an open-source SIEM MVP with MITRE ATT&CK-mapped rules, seven UEBA signals, entity risk scoring, and 24-hour incident correlation. Built log ingestion for Syslog/CEF, Okta, Entra ID, GitHub, and AWS CloudTrail, with role-based access controls, auditable triage, and approval-gated AI response proposals. Integrated Sigma detection content.',
+    stack: ['Python', 'SQLite', 'SIEM', 'Sigma', 'MITRE ATT&CK', 'UEBA'],
+    sourceCode: 'https://github.com/kpulik/autosiem',
+    livePreview: '',
+  },
+  {
+    name: 'Security Toolkit API',
+    description:
+      'Developed and deployed a FastAPI service on Render and RapidAPI for password breach checks using HIBP k-anonymity, SSL/TLS analysis, passive TLS scanning, and GitHub secret detection. Added rate limits, scan authorization attestation, masked secret findings, and structured error responses.',
+    stack: ['Python', 'FastAPI', 'TLS', 'HIBP', 'Render', 'RapidAPI'],
+    sourceCode: 'https://github.com/kpulik/ApiProj',
+    livePreview: '',
+  },
+  {
     name: 'Toyota Secure Vehicle Communications',
     description:
-      'Built an end-to-end, X448-based, rekey-capable EV charging handshake in the OP-TEE Trusted Application and host client, meeting Toyota TMNA Product Cybersecurity standards for the ISO 15118-20 use case. Replaced the team\'s PyQt6 desktop demo with a browser-based dashboard for the UTDesign EXPO, visualizing live MITM attack detection between EV, EVSE, and a Raspberry Pi attacker node.',
+      'Engineered X448 ECDH key exchange in an OP-TEE Trusted Application on Arm64 QEMU for rekey-capable EV-to-charger sessions in an ISO 15118-20 prototype. Stabilized X.509 certificates by removing a custom CMAC extension, resolved Arm64 build failures, and developed a browser dashboard demonstrating man-in-the-middle attack detection with a Raspberry Pi attacker node at UTDesign EXPO.',
     image: '/Portfolio/img/toyota-logo.svg',
     stack: ['C/C++', 'Python', 'Arm64 QEMU', 'TEE', 'X448'],
     sourceCode: '',
@@ -35,7 +51,7 @@ const projects = [
   {
     name: 'Secure Home Lab on Raspberry Pi',
     description:
-      'Reduced network ad traffic by 99% by deploying a Pi-hole DNS sinkhole reachable remotely over a Tailscale tailnet. Implemented custom firewall rules, strict access controls, and active DNS query log monitoring.',
+      'Reported approximately 99% less network ad traffic after deploying a Pi-hole DNS sinkhole reachable remotely over a Tailscale tailnet. Implemented custom firewall rules, strict access controls, and active DNS query log monitoring.',
     stack: ['Raspberry Pi', 'Linux', 'Tailscale', 'Pi-hole', 'DNS', 'Firewall'],
     sourceCode: '',
     livePreview: '',
@@ -123,37 +139,36 @@ const projects = [
 ]
 
 // Skills section
-const skills = [
-  'Java',
-  'Python',
-  'C/C++',
-  'SQL',
-  'Object-Oriented Design',
-  'Data Structures',
-  'Algorithms',
-  'Software Design Patterns',
-  'UNIX Systems Programming',
-  'Database Design & Normalization',
-  'Git',
-  'Linux',
-  'Arm64 QEMU',
-  'Raspberry Pi',
-  'Network Security',
-  'Firewalls',
-  'Network Protocols (OSI Model, TCP/IP)',
-  'Access Control',
-  'Data Integrity',
+const skillCategories = [
+  {
+    label: 'Languages',
+    items: ['Python', 'C/C++', 'Java', 'SQL', 'Bash'],
+  },
+  {
+    label: 'Security & Networking',
+    items: ['SIEM', 'UEBA', 'Sigma Rules', 'MITRE ATT&CK', 'TCP/IP', 'DNS', 'TLS', 'Firewalls', 'X.509', 'X448 ECDH', 'OP-TEE'],
+  },
+  {
+    label: 'Systems',
+    items: ['Linux', 'Windows', 'Arm64 QEMU', 'Raspberry Pi', 'Tailscale', 'Pi-hole', 'UNIX Systems Programming'],
+  },
+  {
+    label: 'Tools & Frameworks',
+    items: ['Git', 'Pytest', 'FastAPI', 'SQLite', 'AWS IAM Fundamentals', 'PyTorch', 'Sentence Transformers'],
+  },
 ]
+
+const skills = skillCategories.flatMap(({ items }) => items)
 
 // Experience section - Work and Volunteering
 const experience = [
   {
     title: 'Vehicle Cybersecurity Engineer, Embedded Security Project',
-    company: 'Toyota Tsusho America, UTDesign Capstone Project',
+    company: 'Toyota Tsusho Systems-sponsored UTDesign Capstone',
     location: 'The University of Texas at Dallas',
     date: 'Jan 2026 - May 2026',
     description:
-      'Built an end-to-end, X448-based, rekey-capable EV charging handshake in the OP-TEE Trusted Application and host client, meeting Toyota TMNA Product Cybersecurity standards for the ISO 15118-20 use case. Implemented X448 ECDH (RFC 8418) for ephemeral session keys and stabilized X.509 certificates across sessions by refactoring the custom CMAC extension.',
+      'Engineered an X448 ECDH key exchange in an OP-TEE Trusted Application on Arm64 QEMU for an ISO 15118-20 prototype. Stabilized X.509 certificate generation and validation by removing a custom CMAC extension across the builder, parser, verifier, and Trusted Application. Resolved Arm64 build failures across four source files, helped automate rebuilds and testing, and presented a live attack-detection dashboard to corporate stakeholders at UTDesign EXPO.',
   },
   {
     title: 'AI Research Program Participant',
@@ -199,15 +214,17 @@ const contributions = [
     description:
       'Added opt-in, experimental EmbeddingGemma 2 support and native local image, audio, and video retrieval, with CLI/MCP search controls, embedding-space validation, and recovery safeguards. Included regression tests, real-model integration tests, and setup documentation. PR #2694 merged into develop on October 10, 2026, with all 13 CI checks passing.',
     pr: 'https://github.com/MemPalace/mempalace/pull/2694',
+    prNumber: 2694,
     stack: ['Python', 'PyTorch', 'Sentence Transformers', 'Multimodal Retrieval', 'MCP'],
   },
   {
     project: 'MemPalace',
-    projectUrl: 'https://github.com/milla-jovovich/mempalace',
+    projectUrl: 'https://github.com/MemPalace/mempalace',
     description:
       'Added a first-class mempalace mcp CLI subcommand, improved MCP setup documentation including custom palace path guidance, and added regression tests for CLI behavior.',
-    pr: 'https://github.com/milla-jovovich/mempalace/pull/315',
-    issue: 'https://github.com/milla-jovovich/mempalace/issues/296',
+    pr: 'https://github.com/MemPalace/mempalace/pull/315',
+    prNumber: 315,
+    issue: 'https://github.com/MemPalace/mempalace/issues/296',
     stack: ['Python', 'CLI', 'MCP'],
   },
 ]
@@ -215,20 +232,12 @@ const contributions = [
 // Certifications section
 const certifications = [
   {
-    name: 'CompTIA Security+',
+    name: 'CompTIA Security+ (SY0-701)',
     issuer: 'CompTIA',
     date: 'April 25, 2026',
     status: 'Earned',
     credentialUrl: 'https://www.credly.com/badges/4d9f54e1-9175-46d3-83b6-6a15f706a8fa',
     image: 'https://images.credly.com/size/680x680/images/80d8a06a-c384-42bf-ad36-db81bce5adce/blob',
-  },
-  {
-    name: 'CDSA (Certified Defensive Security Analyst)',
-    issuer: 'HackTheBox',
-    date: '',
-    status: 'In Progress',
-    credentialUrl: '',
-    image: '',
   },
   {
     name: 'Eagle Scout',
@@ -242,4 +251,4 @@ const certifications = [
 
 // Important: If you add extra sections, make sure to export them here
 // Export all sections so they can be used in other files
-export { header, about, projects, skills, experience, education, contact, contributions, certifications }
+export { header, about, projects, skills, skillCategories, experience, education, contact, contributions, certifications }

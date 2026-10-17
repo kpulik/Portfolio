@@ -39,8 +39,8 @@ const Contributions = () => {
                   className='contrib__link link--icon'
                   target='_blank'
                   rel='noopener noreferrer'
-                  aria-label='pull request'
-                  title='Pull Request'
+                  aria-label={`View ${c.project} PR #${c.prNumber}`}
+                  title={`Pull Request #${c.prNumber}`}
                 >
                   <GitHubIcon fontSize='small' />
                 </a>
@@ -65,7 +65,7 @@ const Contributions = () => {
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                View PR &rarr;
+                View PR #{c.prNumber} &rarr;
               </a>
             </div>
           </article>

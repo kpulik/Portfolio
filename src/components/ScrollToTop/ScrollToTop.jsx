@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ArrowUpward } from '@mui/icons-material';
 import './ScrollToTop.css';
 

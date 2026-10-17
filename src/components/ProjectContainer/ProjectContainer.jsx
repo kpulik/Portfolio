@@ -1,4 +1,5 @@
 import uniqid from 'uniqid'
+import PropTypes from 'prop-types'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LaunchIcon from '@mui/icons-material/Launch'
 import './ProjectContainer.css'
@@ -60,5 +61,17 @@ const ProjectContainer = ({ project, index }) => (
     )}
   </article>
 )
+
+ProjectContainer.propTypes = {
+  project: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    sourceCode: PropTypes.string,
+    livePreview: PropTypes.string,
+    image: PropTypes.string,
+    stack: PropTypes.arrayOf(PropTypes.string),
+  }).isRequired,
+  index: PropTypes.number.isRequired,
+}
 
 export default ProjectContainer
