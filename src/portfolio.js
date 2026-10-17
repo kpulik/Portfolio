@@ -194,6 +194,14 @@ const contact = {
 // Open Source Contributions section
 const contributions = [
   {
+    project: 'MemPalace — EmbeddingGemma 2 & Media Retrieval',
+    projectUrl: 'https://github.com/MemPalace/mempalace',
+    description:
+      'Added opt-in, experimental EmbeddingGemma 2 support and native local image, audio, and video retrieval, with CLI/MCP search controls, embedding-space validation, and recovery safeguards. Included regression tests, real-model integration tests, and setup documentation. PR #2694 merged into develop on October 10, 2026, with all 13 CI checks passing.',
+    pr: 'https://github.com/MemPalace/mempalace/pull/2694',
+    stack: ['Python', 'PyTorch', 'Sentence Transformers', 'Multimodal Retrieval', 'MCP'],
+  },
+  {
     project: 'MemPalace',
     projectUrl: 'https://github.com/milla-jovovich/mempalace',
     description:
