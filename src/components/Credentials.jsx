@@ -18,13 +18,30 @@ const Credentials = () => (
       ))}
       {certifications.map((c) => (
         <article className='entry' key={c.name}>
-          <p className='when'>{c.date || c.status}</p>
-          <div>
-            <h3>{c.credentialUrl ? <a href={c.credentialUrl}>{c.name}</a> : c.name}</h3>
-            <p className='where'>
-              {c.issuer}
-              {c.status !== 'Earned' && `, ${c.status}`}
-            </p>
+          <p className='when'>
+            {c.date}
+            <span className={`tag${c.status === 'Earned' ? ' earned' : ''}`}>{c.status}</span>
+          </p>
+          <div className='cert'>
+            {c.image && (
+              <a href={c.credentialUrl || undefined} aria-label={`${c.name} badge`}>
+                <img src={c.image} alt={`${c.name} badge`} width='72' height='72' />
+              </a>
+            )}
+            <div>
+              <h3>{c.name}</h3>
+              <p className='where'>
+                {c.issuer}
+                {c.credentialUrl && (
+                  <>
+                    {' '}
+                    <a href={c.credentialUrl} aria-label={`Verify ${c.name} credential`}>
+                      Verify
+                    </a>
+                  </>
+                )}
+              </p>
+            </div>
           </div>
         </article>
       ))}

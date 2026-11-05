@@ -8,6 +8,7 @@ import OpenSource from './components/OpenSource'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
 import SiteFooter from './components/SiteFooter'
+import ScrollTop from './components/ScrollTop'
 
 const App = () => (
   <>
@@ -26,6 +27,7 @@ const App = () => (
       <Contact />
     </main>
     <SiteFooter />
+    <ScrollTop />
   </>
 )
 
