@@ -32,7 +32,7 @@ const Contact = () => {
         </p>
         {contact.buyMeACoffeeQr && (
           <div className='qr'>
-            <img src={contact.buyMeACoffeeQr} alt='Buy Me a Coffee QR code' loading='lazy' />
+            <img src={contact.buyMeACoffeeQr} alt='Buy Me a Coffee QR code' width='96' height='96' />
             <p>Enjoying my work? Scan the code to support my projects.</p>
           </div>
         )}
