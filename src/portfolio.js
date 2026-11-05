@@ -12,7 +12,7 @@ const about = {
   role: 'Computer Science Graduate',
   description:
     'Computer Science graduate from UT Dallas, based in San Jose, CA, focused on cybersecurity and software engineering. CompTIA Security+ certified, with experience building detection engineering tools, security APIs, and an OP-TEE vehicle communications prototype. Open to entry-level cybersecurity and software engineering roles. Starting an in-person Master of Computer Science at UIUC in spring 2027.',
-  resume: '/Portfolio/Kevin_Pulikkottil_Resume.pdf?v=20261017', // Version the link when replacing the PDF
+  resume: '/Portfolio/Kevin_Pulikkottil_Resume.pdf?v=20261104', // Version the link when replacing the PDF
   social: {
     linkedin: 'https://www.linkedin.com/in/kpulik/', // LinkedIn profile link
     github: 'https://github.com/kpulik', // GitHub profile link
