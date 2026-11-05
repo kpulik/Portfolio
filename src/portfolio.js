@@ -75,7 +75,7 @@ const projects = [
   {
     name: 'AI Dev Utility',
     description:
-      'Created an open-source local-first AI developer toolkit that unifies The Agency, Impeccable, PromptFoo, and MiniFish with one setup script and a local dashboard. Includes Ollama-based local inference, PromptFoo evaluation workflows, and project bootstrapping scripts.',
+      'Created an open-source local-first AI developer toolkit that unifies The Agency, Anthropic\'s frontend-design skill, PromptFoo, and MiniFish with one setup script and a local dashboard. Includes Ollama-based local inference, PromptFoo evaluation workflows, and project bootstrapping scripts.',
     stack: ['Python', 'Shell', 'Ollama', 'PromptFoo', 'Developer Tooling'],
     sourceCode: 'https://github.com/kpulik/ai-dev-utility',
     livePreview: '', // Add live link if available
