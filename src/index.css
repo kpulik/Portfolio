@@ -116,3 +116,41 @@ footer { padding: clamp(40px, 6vw, 80px) var(--gutter) 40px; color: var(--graphi
 
 .scrolltop { position: fixed; right: var(--gutter); bottom: 20px; z-index: 5; padding: 9px 16px; border-radius: 6px; background: var(--ink); color: var(--paper); font-weight: 600; font-size: .875rem; text-decoration: none; }
 .scrolltop:hover { background: var(--secure); color: #fff; text-decoration: none; }
+
+/* Motion: one page-load moment, a few responses to the visitor, nothing scattered.
+   Everything is skipped for reduced motion, and nothing starts hidden if a feature is unsupported. */
+@keyframes widen { from { font-stretch: 62%; opacity: 0; } to { font-stretch: 125%; opacity: 1; } }
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--secure) 55%, transparent); }
+  70%, 100% { box-shadow: 0 0 0 9px transparent; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  /* the name opens up along Archivo's width axis, then the rest of the hero settles in behind it */
+  .hero h1 span { animation: widen .9s cubic-bezier(.2, .8, .2, 1) both; }
+  .hero h1 span:nth-child(2) { animation-delay: .12s; }
+  .hero > div > * { animation: show .6s ease-out both; }
+  .hero > div > :nth-child(1) { animation-delay: .4s; }
+  .hero > div > :nth-child(2) { animation-delay: .5s; }
+  .hero > div > :nth-child(3) { animation-delay: .6s; }
+  .hero > div > :nth-child(4) { animation-delay: .7s; }
+  .hero > div > :nth-child(5) { animation-delay: .8s; }
+  .status i { animation: pulse 2.4s ease-in-out 1.2s infinite; }
+  .scrolltop { animation: show .25s ease-out; }
+}
+/* project rows ease open and closed instead of snapping */
+@supports (interpolate-size: allow-keywords) and selector(::details-content) {
+  @media (prefers-reduced-motion: no-preference) {
+    :root { interpolate-size: allow-keywords; }
+    .proj::details-content { block-size: 0; overflow: clip; transition: block-size .3s ease, content-visibility .3s allow-discrete; }
+    .proj[open]::details-content { block-size: auto; }
+  }
+}
+/* the start-here columns fade in as they scroll into view (no JS, visible by default) */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .pick { animation: show linear both; animation-timeline: view(); animation-range: entry 0% entry 60%; }
+    .pick:nth-child(2) { animation-range: entry 8% entry 68%; }
+    .pick:nth-child(3) { animation-range: entry 16% entry 76%; }
+    .pick:nth-child(4) { animation-range: entry 24% entry 84%; }
+  }
+}
