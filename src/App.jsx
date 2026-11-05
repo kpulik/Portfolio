@@ -1,38 +1,32 @@
-import { useContext } from 'react';
-import useScrollAnimation from './hooks/useScrollAnimation';
-import { ThemeContext } from './contexts/theme';
-import Header from './components/Header/Header';
-import About from './components/About/About';
-import Projects from './components/Projects/Projects';
-import Skills from './components/Skills/Skills';
-import Experience from './components/Experience/Experience';
-import Contributions from './components/Contributions/Contributions';
-import Certifications from './components/Certifications/Certifications';
-import ScrollToTop from './components/ScrollToTop/ScrollToTop';
-import Contact from './components/Contact/Contact';
-import Footer from './components/Footer/Footer';
-import './App.css';
+import TopBar from './components/TopBar'
+import Hero from './components/Hero'
+import Highlights from './components/Highlights'
+import Work from './components/Work'
+import Experience from './components/Experience'
+import Credentials from './components/Credentials'
+import OpenSource from './components/OpenSource'
+import Skills from './components/Skills'
+import Contact from './components/Contact'
+import SiteFooter from './components/SiteFooter'
 
-const App = () => {
-  const [{ themeName }] = useContext(ThemeContext);
-  useScrollAnimation();
+const App = () => (
+  <>
+    <a className='skip' href='#work'>
+      Skip to work
+    </a>
+    <TopBar />
+    <main>
+      <Hero />
+      <Highlights />
+      <Work />
+      <Experience />
+      <Credentials />
+      <OpenSource />
+      <Skills />
+      <Contact />
+    </main>
+    <SiteFooter />
+  </>
+)
 
-  return (
-    <div id="top" className={`${themeName} app`}>
-      <Header />
-      <main>
-        <About />
-        <Certifications />
-        <Projects />
-        <Skills />
-        <Experience />
-        <Contributions />
-        <Contact />
-      </main>
-      <ScrollToTop />
-      <Footer />
-    </div>
-  );
-};
-
-export default App;
+export default App
